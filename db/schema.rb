@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2022_12_05_143925) do
 
   create_table "medicines", force: :cascade do |t|
     t.string "name"
+    t.string "image_url"
     t.string "description"
     t.bigint "pharmacist_id"
     t.bigint "user_id"
