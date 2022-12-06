@@ -1,0 +1,5 @@
+Pharmacy() => Create, Update, Delete, Read
+Users (Clients) => Order
+Medicine(name, description, image_url, pharmacy_id)
+Order (user_id, medicine_id, created_at)
+

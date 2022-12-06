@@ -1,3 +1,3 @@
 class MedicineSerializer < ActiveModel::Serializer
-  attributes :name, :description, :pharmacist_id, :user_id
+  attributes :name, :image_url, :description, :pharmacy_id
 end

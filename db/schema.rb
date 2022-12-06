@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_05_143925) do
+ActiveRecord::Schema.define(version: 2022_12_06_070631) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,21 +19,27 @@ ActiveRecord::Schema.define(version: 2022_12_05_143925) do
     t.string "name"
     t.string "image_url"
     t.string "description"
-    t.bigint "pharmacist_id"
-    t.bigint "user_id"
+    t.bigint "pharmacy_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["pharmacist_id"], name: "index_medicines_on_pharmacist_id"
-    t.index ["user_id"], name: "index_medicines_on_user_id"
+    t.index ["pharmacy_id"], name: "index_medicines_on_pharmacy_id"
   end
 
-  create_table "pharmacists", force: :cascade do |t|
+  create_table "orders", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "medicine_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["medicine_id"], name: "index_orders_on_medicine_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "pharmacies", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "password_digest"
+    t.string "address"
     t.string "location"
-    t.string "contact"
-    t.string "gender"
+    t.string "phone_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -43,8 +49,7 @@ ActiveRecord::Schema.define(version: 2022_12_05_143925) do
     t.string "email"
     t.string "password_digest"
     t.string "location"
-    t.string "contact"
-    t.integer "age"
+    t.string "phone_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

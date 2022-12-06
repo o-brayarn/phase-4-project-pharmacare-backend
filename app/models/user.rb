@@ -1,5 +1,5 @@
 class User < ApplicationRecord
   #   has_secure_password
-  has_many :medicines
-  has_many :pharmacists, through: :medicines
+  has_many :orders, dependent: :destroy
+  has_many :medicines, through: :orders
 end
