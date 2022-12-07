@@ -3,4 +3,9 @@ class OrdersController < ApplicationController
     @orders = Order.all
     render json: @orders
   end
+
+  def show
+    @order = Order.find(params[:id])
+    render json: @order, status: :ok, serializer: MedicineSerializer
+  end
 end
