@@ -21,6 +21,10 @@ Bundler.require(*Rails.groups)
 
 module PharmacareApi
   class Application < Rails::Application
+    # Adding cookies and session middleware
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
+    
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
