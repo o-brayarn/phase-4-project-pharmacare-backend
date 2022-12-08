@@ -12,8 +12,11 @@ pharmacy1 = Pharmacy.create!(name: "Good Kind", email: "goodkind@gmail.com", loc
 pharmacy2 = Pharmacy.create!(name: "Feel Good Pharm", email: "feelgood@pharm.com", location: "Ngong Road", address: "111 Prestige", phone_number: "78781236")
 pharmacy3 = Pharmacy.create!(name: "The Small Pharma", email: "smallpharma@gmail.com", location: "Nairobi CBD", address: "Tom Mboya Street", phone_number: "78655325")
 
-p "seeding medicin"
+p "seeding medicine"
 medicine1 = Medicine.create!(name: "Ibuprofen", description: "Ibuprofen is a nonsteroidal anti-inflammatory drug that is used for treating pain, fever, and inflammation. This includes painful menstrual periods, migraines, and rheumatoid arthritis.", image_url: "https://bit.ly/3Fa0tJp", pharmacy_id: pharmacy1.id)
 medicine2 = Medicine.create!(name: "Adderall", description: "Adderall is used to treat attention deficit hyperactivity disorder (ADHD) and narcolepsy", image_url: "https://bit.ly/3P7uyhx", pharmacy_id: pharmacy2.id)
 medicine3 = Medicine.create!(name: "Amoxicillin", description: "Amoxicillin is an antibiotic medication used to treat a number of bacterial infections. These include middle ear infection, strep throat, pneumonia, skin infections, and urinary tract infections among others", image_url: "https://bit.ly/3HgtlTg", pharmacy_id: pharmacy3.id)
-p "completed seedings for"
+p "completed seedings"
+
+user1 = User.create!(name: "admin", email: "admin@admin.com", password: "password", location: "Mombasa", phone_number: "1234356576")
+p "Done seeding user"
