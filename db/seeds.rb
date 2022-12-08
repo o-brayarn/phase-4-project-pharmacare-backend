@@ -18,5 +18,5 @@ medicine2 = Medicine.create!(name: "Adderall", description: "Adderall is used to
 medicine3 = Medicine.create!(name: "Amoxicillin", description: "Amoxicillin is an antibiotic medication used to treat a number of bacterial infections. These include middle ear infection, strep throat, pneumonia, skin infections, and urinary tract infections among others", image_url: "https://bit.ly/3HgtlTg", pharmacy_id: pharmacy3.id)
 p "completed seedings"
 
-user1 = User.create!(name: "admin", email: "admin@admin.com", password: "password", location: "Mombasa", phone_number: "1234356576")
+user1 = User.create!(name: "admin", email: "admin@admin.com", password: "password", password_confirmation: "password", location: "Mombasa", phone_number: "1234356576")
 p "Done seeding user"
