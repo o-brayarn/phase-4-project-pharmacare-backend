@@ -8,8 +8,13 @@ class MedicinesController < ApplicationController
 
   def show
     @medicine = Medicine.find(params[:id])
-    render json: @medicine
+    render json: @medicine, serializer: MedicineCatalogueSerializer
   end
+
+  # def catalogue
+  #   @medicine = Medicine.find(params[:id])
+  #   render json: @medicine, serializer: MedicineCatalogueSerializer
+  # end
 
   private
 

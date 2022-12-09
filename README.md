@@ -144,6 +144,18 @@ Get a list of users
 ]
 ```
 
+> GET
+
+`/pharmacies/{:id}/medicines`
+
+```json
+{
+  "name": "Adderall",
+  "description": "Adderall is used to treat attention deficit hyperactivity disorder (ADHD) and narcolepsy",
+  "image_url": "https://bit.ly/3P7uyhx"
+}
+```
+
 ## **_Tools Used_**
 
 - **main:** _ruby on rails, postgresql_
